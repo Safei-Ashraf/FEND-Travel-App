@@ -9,6 +9,7 @@ var cors = require('cors')
 const app = express()
 const bodyParser = require('body-parser');
 const mockAPIResponse = require('./mockAPI.js')
+const PORT = process.env.PORT || 8081;
 
 
 //Express middleware
@@ -20,6 +21,9 @@ app.use(express.static('dist'))
 
 console.log(__dirname)
 
+// Setup empty JS object to act as endpoint for all routes
+projectData = {};
+
 //API Info:
 const application_key =  process.env.API_KEY;
 
@@ -29,8 +33,8 @@ app.get('/', function (req, res) {
 })
 
 // designates what port the app will listen to for incoming requests
-app.listen(8081, function () {
-    console.log('Example app listening on port 8081!')
+app.listen(PORT, function () {
+    console.log(`Example app listening on port ${PORT}!!`)
 })
 
 app.get('/test', function (req, res) {
