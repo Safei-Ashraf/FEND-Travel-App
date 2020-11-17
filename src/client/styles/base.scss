@@ -13,8 +13,23 @@ section {
     max-width: 800px;
     margin: 50px auto;
     text-align: center;
+    .response{
+        
+        margin: auto;
+        p{
+            font-weight: normal;
+            color: blue;
+        }
+        strong{
+            font-weight: bolder;
+            color: green;
+        }
+    }
 }
 strong{
     font-weight: bolder;
-    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+div{
+    padding: 20px
 }

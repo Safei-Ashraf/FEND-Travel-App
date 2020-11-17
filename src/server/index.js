@@ -11,7 +11,7 @@ var cors = require('cors')
 const app = express()
 const bodyParser = require('body-parser');
 const mockAPIResponse = require('./mockAPI.js')
-const PORT = process.env.PORT || 8081;
+const PORT = process.env.PORT || 8080;
 
 
 //Express middleware
@@ -28,7 +28,6 @@ projectData = {};
 
 //API Info:
 const application_key =  process.env.API_KEY;
-let articleUrl = `https://worldessays.com/blog/500-words-essay-sample.html`
 
 //request:
 const getSentiment = async(req,r)=>{
@@ -65,12 +64,12 @@ app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
 
-app.post('/', function(req,res){
-    let data = req.body;
-    console.log(`This is the new POST body SERVER SIDE: ${data}`);
-    projectData['confidence'] = data.confidence;
-    projectData['agreement'] = data.agreement;
-    projectData['score_tag'] = data.score_tag;
-    res.send(projectData)
-    console.log(`This is projectData result after post ${projectData}`);
-});
+// app.post('/', function(req,res){
+//     let data = req.body;
+//     console.log(`This is the new POST body SERVER SIDE: ${data}`);
+//     projectData['confidence'] = data.confidence;
+//     projectData['agreement'] = data.agreement;
+//     projectData['score_tag'] = data.score_tag;
+//     res.send(projectData)
+//     console.log(`This is projectData result after post ${projectData}`);
+// });
