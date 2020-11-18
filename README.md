@@ -44,6 +44,20 @@ Service workers set up in webpack to support offline functionality.
 ##  Testing
 The project has Jest installed, test cases attached for each component.
 
+To run tests using Jest, use the command "npm run test"
+
+
+### Results:
+
+ PASS  __test__/handleSubmit.test.js (11.598 s)
+ PASS  __test__/validateUrl.test.js (11.618 s)
+
+Test Suites: 2 passed, 2 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        23.158 s
+Ran all test suites.
+
 ## Starter Code:
 
 Basic code and file structure are provided by Udacity, as layout for requirements in project "NLP Evaluation"
