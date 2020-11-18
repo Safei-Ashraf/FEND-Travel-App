@@ -5,11 +5,12 @@
 
 
 - Project Summary
-- API used
-- File Structure
-- How TO Run This Project
+- About NLP
+- API Used
+- Demo and Installation
 - Offline Functionality
 - Testing
+- Starter Code
 
 ## Project Summary:
 
@@ -25,6 +26,9 @@ This Project provides a tool for the user to analyze text content in an article 
 ### Meaning Cloud API
 You could visit it by [clicking the link] (https://www.meaningcloud.com/developer/sentiment-analysis/console/2.1)
 
+
+In order to use the API yourself, you would need to sign up and obtain a KEY.
+
 ##  How To Run This Project:
 
   1. Clone Project or Download Files
@@ -35,11 +39,14 @@ You could visit it by [clicking the link] (https://www.meaningcloud.com/develope
   6. Backend Server runs on port 8080 in local, and dev server on 8081.
 
 ##  Offline Functionality
-The project have service workers set up in webpack.
+Service workers set up in webpack to support offline functionality.
 
 ##  Testing
-The project has Jest installed
+The project has Jest installed, test cases attached for each component.
 
+## Starter Code:
+
+Basic code and file structure are provided by Udacity, as layout for requirements in project "NLP Evaluation"
 
 
 
