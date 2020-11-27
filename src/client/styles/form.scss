@@ -1,5 +1,11 @@
-form {
-    border: 1px solid #545454;
+.input-form{
+    color: white;
+    font-size: 1.2em;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    border-radius:12px ;
+    form{
+    border-bottom: 3px solid #e2e2e2;
     border-radius: 3px;
     padding: 40px;
 
@@ -13,19 +19,50 @@ form {
         -moz-border-radius: 12px;
         -ms-border-radius: 12px;
         -o-border-radius: 12px;
+        transition: 0.4s all;
+        -webkit-transition: 0.4s all;
+        -moz-transition: 0.4s all;
+        -ms-transition: 0.4s all;
+        -o-transition: 0.4s all;
 }
-    #sub-btn{
-        font-weight: bold;
-        font-size: 1.5em;
-        margin: auto;
-        background-color: #6d1d1d;
-        color: whitesmoke;
-        border-radius: 12px;
-        -webkit-border-radius: 12px;
-        -moz-border-radius: 12px;
-        -ms-border-radius: 12px;
-        -o-border-radius: 12px;
+input:focus {
+    padding: 20px 20px;
+    outline: transparent;
 }
+button{
+    color: white;
+    font-weight: bold;
+    background-color: yellowgreen;
+    width: auto;
+    padding: 10px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    box-shadow: 5px 5px 2px black;
+    outline: transparent;
+    transition: 0.4s all;
+    -webkit-transition: 0.4s all;
+    -moz-transition: 0.4s all;
+    -ms-transition: 0.4s all;
+    -o-transition: 0.4s all;
+}
+button:active{
+    box-shadow: none;
+}
+    // #sub-btn{
+    //     font-weight: bold;
+    //     font-size: 1.5em;
+    //     margin: auto;
+    //     background-color: #6d1d1d;
+    //     color: whitesmoke;
+    //     border-radius: 12px;
+    //     -webkit-border-radius: 12px;
+    //     -moz-border-radius: 12px;
+    //     -ms-border-radius: 12px;
+    //     -o-border-radius: 12px;}
     
 }
 
+}

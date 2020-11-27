@@ -33,3 +33,23 @@ strong{
 div{
     padding: 20px
 }
+div#results{
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    text-align: center;
+    div{
+        border: 2px solid green;
+        justify-content: center;
+        align-self: center;
+        border-radius: 12px;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+}
+}
+.details{
+    background-color: wheat;
+    color: black;
+}

@@ -2,38 +2,75 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>NLP &#9889;</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title> &#9992; Travel App</title>
+        <!--Adding FontAwesome Icons lib-->
+        <script src="https://kit.fontawesome.com/5f294d660e.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
 
         <header>
             <div class="logo">
-                &#9889;
+                &#9992;
             </div>
             <div class="navigation">
-                navigation
+                Travel App &#127759;
             </div>
         </header>
 
-        <main>
-            <section>
-                <form class="" onsubmit="return  Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" placeholder="Name">
-                    <input  id="sub-btn" type="submit" name="" value="submit" onclick="return   Client.handleSubmit(event)" onsubmit="return  Client.handleSubmit(event)">
+        <main class="container">
+            <section class="input-form">
+                <!-- <form class="" onsubmit="return  Client.handleSubmit(event)"> -->
+                <form>
+                    <div class="user-inputs">
+                        <label for="destination">My Destination: </label>
+                        <input id="dest" type="text" name="destination" value="" placeholder="Pick Your Destination">
+                        <label for="departure-date">Departure Date: </label>
+                        <input type="date" name="departure date" id="departure-date" placeholder="MM-DD-YYYY"/>
+                        <label for="leaving-date">Leaving Date: </label>
+                        <input type="date" name="Leaving date" id="leaving-date" placeholder="MM-DD-YYYY"/>
+                    </div>
+                    <div class="form-btns">
+                        <button id="submit" type="submit">Submit</button>
+                        <button id="reset" type="reset">Reset</button>
+                    </div>
+                    <!-- <input  id="sub-btn" type="submit" name="" value="submit" onclick="return   Client.handleSubmit(event)" onsubmit="return  Client.handleSubmit(event)"> -->
                 </form>
             <section>
 
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
+            <section class="form-results">
+                <h3>Results:</h3>
+                <div id="results">
+                    <div class="img-display">
+                        <img src="" alt="destination city image" class="city-img">
+                        bla bla img
+                    </div>
+                    <div class="info-display">
+                        bla bla info
+                        <p class="countdown">
+                            <span class="country"></span> is 
+                            <span class="days"></span> day(s) away!
+                        </p>
+                        <p class="trip-length">
+                            You will be traveling for
+                            <span class="length"></span>
+                            day(s)
+                        </p>
+                    <div class='details'>
+                        <h3>Here is your trip details (should be able to print)</h3>
+                        <div class="details-display">bla bla bla API info</div>
+                        <button>Export As PDF</button>
+                    </div>
+                </div>
             </section>
         </main>
 
         <footer>
-            <p>This is a footer</p>
+            <p>Enjoy Your Trip with us &copy; Safei Ashraf &#127756;</p>
         </footer>
-        <script>
+        <!-- <script>
             // Check that service workers are supported
             if ('serviceWorker' in navigator) {
                 // Use the window load event to keep the page load performant
@@ -41,6 +78,6 @@
                     navigator.serviceWorker.register('/service-worker.js');
                 });
             }
-        </script>
+        </script> -->
     </body>
 </html>
