@@ -7,7 +7,6 @@ import './styles/footer.scss'
 import './styles/form.scss'
 import './styles/header.scss'
 
-get_GeoNamesInfo();
 //Getting info from main form:
 const main_form = document.querySelector('form');
 const input_city= document.getElementById('dest');
@@ -45,6 +44,7 @@ const handleFormSubmit = (e)=>{
     trips_data.countdown = countdown;
     console.log(`your trip will be ${trips_data.length} day(s) long`);
     console.log(`& it is ${trips_data.countdown} day(s) Away!`);
+    get_GeoNamesInfo(input_city.value);
     resetFormFields();
 }
 //(millis / (60*60*24*1000))

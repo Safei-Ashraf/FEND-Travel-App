@@ -27,13 +27,37 @@
         <form id="travel-form">
             <div class="user-inputs">
                 <label for="destination">My Destination: </label>
-                <input id="dest" type="text" name="destination" placeholder="Pick Your Destination">
+                <input id="dest"
+                    type="text" 
+                    name="destination" 
+                    placeholder="Pick Your Destination"
+                    required
+                />
                 <label for="today-date">Today's Date:</label>
-                <input type="text" name="today date" id="today-date" disabled class="disabled"/>
+                <input 
+                    type="text" 
+                    name="today date" 
+                    id="today-date" 
+                    disabled 
+                    class="disabled"
+                    required
+                />
                 <label for="departure-date">Departure Date: </label>
-                <input type="date" name="departure date" id="departure-date" placeholder="MM-DD-YYYY"/>
+                <input 
+                    type="date" 
+                    name="departure date" 
+                    id="departure-date" 
+                    placeholder="MM-DD-YYYY"
+                    required
+                />
                 <label for="leaving-date">Leaving Date: </label>
-                <input type="date" name="Leaving date" id="leaving-date" placeholder="MM-DD-YYYY"/>
+                <input 
+                    type="date" 
+                    name="Leaving date" 
+                    id="leaving-date" 
+                    placeholder="MM-DD-YYYY"
+                    required
+                />
             </div>
             <div class="form-btns">
                 <button id="submit" type="submit">Submit</button>
