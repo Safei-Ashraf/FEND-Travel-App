@@ -23,10 +23,8 @@ app.use(express.static('dist'))
 
 console.log(__dirname)
 
-// Setup empty JS object to act as endpoint for all routes
-projectData = {};
 
-//API Info:
+//API Info: /// TO BE REMOVED
 const application_key =  process.env.API_KEY;
 
 //request:
