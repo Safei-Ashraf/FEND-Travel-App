@@ -39,3 +39,8 @@ const geoNames_Response =  await fetch(`${geoNames_baseUrl}`+`${goeNames_userNam
         }).catch(err=>console.log('Error', err));
 }
 
+//Helper Methods:
+//to fill html elem:
+export const fillValue = (elem, value_toBe) =>{
+    elem.innerText = value_toBe;
+}
