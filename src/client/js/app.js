@@ -11,6 +11,16 @@ console.log('hello from get_GeoNames API Call Start!');
 const geoNames_baseUrl = `http://api.geonames.org/postalCodeSearchJSON?placename=${cityName}`;
 const goeNames_userName = `&username=safei&maxRows=5`; //to retrive only 5 pieces of info, faster laod.
 
+//Weatherbit API Info:
+const weather_apiKey = `f29ef27d6fa14145b0bf0822b3a11d20`;
+const weather_apiBaseUrl = 'https://api.weatherbit.io/v2.0/current?lat=';
+const weather_forecastBaseUrl = 'https://api.weatherbit.io/v2.0/forecast/daily?lat=';
+
+//Pix API:
+const pix_baseUrl = 'https://pixabay.com/api/?key=';
+const pix_apiKey = `19411258-c004517904d8f634f69615628`;
+const pix_UrlInfo = `&image_type=photo&category=places`;
+
 const geoNames_Response =  await fetch(`${geoNames_baseUrl}`+`${goeNames_userName }`)
 .then(resp=> resp.json())
 .then((data) => 

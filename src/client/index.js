@@ -55,11 +55,14 @@ const handleFormSubmit = (e)=>{
     trips_data.countdown = countdown;
     console.log(`your trip will be ${trips_data.length} day(s) long`);
     fillValue(city_nameDisplay,input_city.value);
+    fillValue(city_namePrint,input_city.value);
     fillValue(trip_countDownDisplay,trips_data.countdown);
     fillValue(trip_lengthDisplay,trips_data.length);
+    fillValue(trip_lengthPrint,trips_data.length);
     console.log(`& it is ${trips_data.countdown} day(s) Away!`);
     get_GeoNamesInfo(input_city.value);
     resetFormFields();
+    console.log(trips_data)
 }
 
 
