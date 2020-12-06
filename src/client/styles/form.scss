@@ -47,9 +47,13 @@ button{
     -moz-transition: 0.4s all;
     -ms-transition: 0.4s all;
     -o-transition: 0.4s all;
+    border: 2px solid transparent;
 }
 button:active{
     box-shadow: none;
+}
+button:hover{
+    border:2px solid white;
 }
     // #sub-btn{
     //     font-weight: bold;
