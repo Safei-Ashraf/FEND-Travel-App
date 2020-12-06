@@ -11,7 +11,7 @@ function handleSubmit(event) {
     // check what text was put into the form field
     let formText = document.getElementById('name').value
     Client.checkForName(formText)
-    const textCheck =validateUrl(formText);
+    const textCheck =validateInput(formText);
      const fullUrl = `http://api.meaningcloud.com/sentiment-2.1?key=${application_key}&lang=auto&url=${formText}&model=general`;
     console.log(textCheck);
     if(textCheck === false){

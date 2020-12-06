@@ -39,7 +39,3 @@ const geoNames_Response =  await fetch(`${geoNames_baseUrl}`+`${goeNames_userNam
         }).catch(err=>console.log('Error', err));
 }
 
-
-export const handleForm = (e)=>{
-    e.preventDefault();
-}

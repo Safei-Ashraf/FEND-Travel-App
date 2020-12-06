@@ -34,7 +34,7 @@ const handleFormSubmit = (e)=>{
     e.preventDefault();
     //calculate trip countdown:
     const countdown = (Date.parse(input_depDate.value)-Date.parse(today_dateField.value)) / (60*60*24*1000);
-
+    
     console.log(`this the value of city input ${input_city.value}`);
     console.log(`this the value of dep  input ${input_depDate.value}`);
     console.log(`this the value of leave input ${input_leavingDate.value}`);
