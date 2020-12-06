@@ -1,4 +1,4 @@
-import  { handleSubmit,validateUrl } from './formHandler';
+import  { handleSubmit,validateInput } from './formHandler';
 
 //Object that would hold all trip's info.
 export const trips_data = {};
