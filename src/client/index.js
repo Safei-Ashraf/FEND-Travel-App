@@ -17,8 +17,17 @@ const today_date = new Date();
 today_dateField.value = today_date.getFullYear().toString() + '-' + (today_date.getMonth() + 1).toString().padStart(2, 0) +
     '-' + today_date.getDate().toString().padStart(2, 0);
 //DOM Elemnts:
+//info display:
 const city_nameDisplay = document.querySelector('.country');
-const trip_countDown = document.querySelector('.days');
+const trip_countDownDisplay = document.querySelector('.days');
+const trip_lengthDisplay = document.querySelector('.length');
+//Print box:
+const city_namePrint = document.querySelector('#print-country');
+const trip_lengthPrint = document.querySelector('#print-length');
+const trip_weatherPrint = document.querySelector('#print-weather'); //pending weather api
+const trip_imgPrint = document.querySelector('#print-photo'); //pending pix api
+
+
 
 //to calculate the countdown of days:
 //Converting date format ref: https://stackoverflow.com/questions/22110369/convert-input-type-text-into-date-format.
@@ -46,7 +55,8 @@ const handleFormSubmit = (e)=>{
     trips_data.countdown = countdown;
     console.log(`your trip will be ${trips_data.length} day(s) long`);
     fillValue(city_nameDisplay,input_city.value);
-    fillValue(trip_countDown,trips_data.countdown);
+    fillValue(trip_countDownDisplay,trips_data.countdown);
+    fillValue(trip_lengthDisplay,trips_data.length);
     console.log(`& it is ${trips_data.countdown} day(s) Away!`);
     get_GeoNamesInfo(input_city.value);
     resetFormFields();

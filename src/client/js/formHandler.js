@@ -53,7 +53,7 @@ function handleSubmit(event) {
 }
 }
 
-//Check if input is a valid URL or not /*https://stackoverflow.com/questions/8667070/javascript-regular-expression-to-validate-url*/ 
+//Check if input is valid letters ref: https://stackoverflow.com/questions/49633558/javascript-form-validation-letters-only
 function validateInput(inputtxt) {
     var letters = /^[a-z]*$/i;
     if (!inputtxt.value.match(letters)) {
