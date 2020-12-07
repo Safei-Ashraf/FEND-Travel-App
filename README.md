@@ -1,34 +1,37 @@
-#   Evaluate News with NLP - FEND Project 4/5
-
-  # Carry ON with Weatherpit API then PIXshit then Printing and we are DONE!
+#   Capstone Travel-App - FEND Project 5/5
 
 ##  Table of Contents
 
 
 - Project Summary
-- About NLP
-- API Used
+- API's Used
 - Demo and Installation
 - Offline Functionality
 - Testing
 - Starter Code
 
+
 ## Project Summary:
 
-This Project provides a tool for the user to analyze text content in an article added using URL, and based on the "Meaning Cloud API", it would analyze the text and return the response back on page to be displayed using the criteria provided back from the API.
 
-##  About NLP:
+This Project provides a form for the user to add the name of a city he would like to visit and dates of his planned journey, and it would return the forecasted weather cased on input and an image of the city.
 
- >     Natural language processing (NLP) is a subfield of computer science, information engineering, and      artificial intelligence concerned with the interactions between computers and human (natural) languages, in particular how to program computers to process and analyze large amounts of natural language data.
-
-
-## API used:
+## API's used:
 
 ### Meaning Cloud API
-You could visit it by [clicking the link] (https://www.meaningcloud.com/developer/sentiment-analysis/console/2.1)
 
 
-In order to use the API yourself, you would need to sign up and obtain a KEY.
+>   GeoNames API  - for city name and info.
+
+
+>  WeatherBit API  - for weather forecast.
+
+
+> Pixabay API - for photos.
+
+
+
+In order to use the API yourself, Please refer back to the docs.
 
 ##  How To Run This Project:
 
