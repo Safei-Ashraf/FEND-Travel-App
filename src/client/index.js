@@ -49,6 +49,7 @@ const calculateDate = (date1, date2)=>{
 
 export const handleFormSubmit = (e)=>{
     e.preventDefault();
+    //imported event listener function to be triggered on the event of form submission
     showElem(results_container);
     //calculate trip countdown:
     const countdown = (Date.parse(input_depDate.value)-Date.parse(today_dateField.value)) / (60*60*24*1000);
