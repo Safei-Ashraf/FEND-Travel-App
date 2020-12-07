@@ -1,5 +1,5 @@
 {
-  "name": "Travel-App",
+  "name": "travel",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "chai": "^4.2.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "ex ress": "^4.17.1",
+    "express": "^4.17.1",
     "node-fetch": "^2.6.1",
     "regenerator-runtime": "^0.13.7",
     "webpack": "^4.44.2",
