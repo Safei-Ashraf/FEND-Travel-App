@@ -80,7 +80,7 @@ if(countdown <= 7)
                 trips_data.weatherDescription = res.data[0].weather.description;
                 //DOM LOGIC TO DRAW INFO TO USER;
                 const domTest = document.querySelector('.weather-temp');
-                domTest.textContent = `the weather is forecasted forecasted description is ${trips_data.weatherDescription} and the temp would be ${trips_data.temp} °C`;
+                domTest.textContent = `the weather forecasted description is ${trips_data.weatherDescription} and the temp would be ${trips_data.temp} °C`;
             }
         })
         .catch(err => console.log(err, 'Error'));
