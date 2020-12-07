@@ -33,7 +33,7 @@ module.exports = {
             template: "./src/client/views/index.html",
             filename: "./index.html",
         }),
-        //new WorkboxPlugin.GenerateSW(),
+        new WorkboxPlugin.GenerateSW(),
         new RemoveServiceWorkerPlugin({ filename: 'service-worker.js' })
     ]
 }

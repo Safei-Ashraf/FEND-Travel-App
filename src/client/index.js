@@ -1,6 +1,6 @@
 import { checkForName } from './js/nameChecker'
 //import { handleSubmit } from './js/formHandler'
-import { get_GeoNamesInfo, get_WeatherInfo, trips_data, fillValue } from './js/app';
+import { get_GeoNamesInfo, get_WeatherInfo, get_PixPic, trips_data, fillValue,showElem } from './js/app';
 import './styles/resets.scss'
 import './styles/base.scss'
 import './styles/footer.scss'
@@ -9,6 +9,8 @@ import './styles/header.scss'
 
 //Getting info from main form:
 const main_form = document.querySelector('form');
+const results_container = document.querySelector('.form-results');
+const submit_btn = document.querySelector('#submit');
 const input_city= document.getElementById('dest');
 const input_depDate= document.getElementById('departure-date');
 const input_leavingDate= document.getElementById('leaving-date');
@@ -25,6 +27,7 @@ input_leavingDate.min = today_dateField.value;
 const city_nameDisplay = document.querySelector('.country');
 const trip_countDownDisplay = document.querySelector('.days');
 const trip_lengthDisplay = document.querySelector('.length');
+const trip_weatherDisplay = document.querySelector('.weather-temp');
 //Print box:
 const city_namePrint = document.querySelector('#print-country');
 const trip_lengthPrint = document.querySelector('#print-length');
@@ -47,32 +50,31 @@ const calculateDate = (date1, date2)=>{
 
 const handleFormSubmit = (e)=>{
     e.preventDefault();
+    showElem(results_container);
     //calculate trip countdown:
     const countdown = (Date.parse(input_depDate.value)-Date.parse(today_dateField.value)) / (60*60*24*1000);
-    console.log('Handling form begins!');
-    console.log(`this the value of city input ${input_city.value}`);
-    console.log(`this the value of dep  input ${input_depDate.value}`);
-    console.log(`this the value of leave input ${input_leavingDate.value}`);
-
     const trip_length = calculateDate(input_depDate.value, input_leavingDate.value);
     trips_data.length = trip_length;
     trips_data.countdown = countdown;
-    console.log(`your trip will be ${trips_data.length} day(s) long`);
+
     fillValue(city_nameDisplay,input_city.value);
-    fillValue(city_namePrint,input_city.value);
+    //fillValue(city_namePrint,input_city.value);
     fillValue(trip_countDownDisplay,trips_data.countdown);
     fillValue(trip_lengthDisplay,trips_data.length);
-    fillValue(trip_lengthPrint,trips_data.length);
+    //fillValue(trip_lengthPrint,trips_data.length);
     console.log(`& it is ${trips_data.countdown} day(s) Away!`);
-    get_GeoNamesInfo(input_city.value);
     console.log(`count down var is ${countdown} and countdown obj is ${trips_data.countdown}`)
-    get_WeatherInfo(trips_data.countdown);
+    //Chaining Requests:
+    get_GeoNamesInfo(input_city.value)
+    .then(()=>get_WeatherInfo(trips_data.countdown))
+    .then(()=>get_PixPic(input_city.value));
     resetFormFields();
-    console.log(trips_data)
 }
 
 
 main_form.addEventListener('submit',handleFormSubmit);
+//submit_btn.addEventListener('click', showElem(results_container));
+
 
 const resetFormFields = ()=>{
     input_city.value = '';
