@@ -49,7 +49,7 @@ console.log(__dirname)
 
 
 //request:
-const getWeather = async (req,r)=>{
+export const getWeather = async (req,r)=>{
 
     const getApiResponse = await fetch(req.body.url)
     .then(resp => resp.json())

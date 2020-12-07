@@ -15,6 +15,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "bootstrap": "^4.5.3",
+    "chai": "^4.2.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "ex ress": "^4.17.1",
@@ -37,6 +38,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
+    "supertest": "^6.0.1",
     "terser-webpack-plugin": "^5.0.3",
     "webpack-dev-server": "^3.11.0",
     "workbox-webpack-plugin": "^5.1.4"
