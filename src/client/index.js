@@ -1,5 +1,5 @@
 import { checkForName } from './js/nameChecker'
-import { get_GeoNamesInfo, get_WeatherInfo, get_PixPic, trips_data, fillValue,showElem } from './js/app';
+import { get_GeoNamesInfo, get_WeatherInfo, get_PixPic, trips_data, fillValue,showElem,resetFormFields } from './js/app';
 import './styles/resets.scss'
 import './styles/base.scss'
 import './styles/footer.scss'
@@ -27,11 +27,12 @@ const city_nameDisplay = document.querySelector('.country');
 const trip_countDownDisplay = document.querySelector('.days');
 const trip_lengthDisplay = document.querySelector('.length');
 const trip_weatherDisplay = document.querySelector('.weather-temp');
-//Print box:
-const city_namePrint = document.querySelector('#print-country');
-const trip_lengthPrint = document.querySelector('#print-length');
-const trip_weatherPrint = document.querySelector('#print-weather'); //pending weather api
-const trip_imgPrint = document.querySelector('#print-photo'); //pending pix api
+const reset_btn = document.getElementById('#reset');
+// //Print box:
+// const city_namePrint = document.querySelector('#print-country');
+// const trip_lengthPrint = document.querySelector('#print-length');
+// const trip_weatherPrint = document.querySelector('#print-weather'); //pending weather api
+// const trip_imgPrint = document.querySelector('#print-photo'); //pending pix api
 
 
 
@@ -67,19 +68,14 @@ export const handleFormSubmit = (e)=>{
     get_GeoNamesInfo(input_city.value)
     .then(()=>get_WeatherInfo(trips_data.countdown))
     .then(()=>get_PixPic(input_city.value));
-    resetFormFields();
+   // resetFormFields();
 }
 
 
 main_form.addEventListener('submit',handleFormSubmit);
 //submit_btn.addEventListener('click', showElem(results_container));
+reset_btn.addEventListener('click', resetFormFields(input_city.value ,  input_depDate.value, input_leavingDate))
 
-
-const resetFormFields = ()=>{
-    input_city.value = '';
-    input_depDate.value = '';
-    input_leavingDate.value = '';
-}
 
 export{
     checkForName,

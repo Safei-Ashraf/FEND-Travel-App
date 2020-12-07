@@ -91,9 +91,9 @@ export const get_PixPic = async(city_name)=>{
 //Pix API:
 const pix_baseUrl = 'https://pixabay.com/api/?key=';
 const pix_apiKey = `19411258-c004517904d8f634f69615628`;
-const pix_UrlInfo = `&image_type=photo&category=places&safesearch=true&per_page=5`;
+const pix_UrlInfo = `&image_type=photo&category=places&safesearch=true&per_page=5&q=${city_name}`;
 
-const pix_response = await fetch(`${pix_baseUrl}${pix_apiKey}&q=${city_name}${pix_UrlInfo}`)
+const pix_response = await fetch(`${pix_baseUrl}${pix_apiKey}${pix_UrlInfo}`)
 .then(response => response.json())
 .then(resp => {
     if(!resp.error)
@@ -123,6 +123,12 @@ export const showElem = (elem)=>{
     elem.style.display = 'block';
     return;
 }
+export const resetFormFields = (x,y,z)=>{
+    x.value = '';
+    y.value = '';
+    z.value = '';
+}
+
 
 
 //POST Data to Server:
