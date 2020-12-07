@@ -63,7 +63,7 @@
             </div>
             <div class="form-btns">
                 <button id="submit" type="submit">Submit</button>
-                <button id="reset" type="reset">Reset</button>
+                <button id="reset">Reset</button>
             </div>
             <!-- <input  id="sub-btn" type="submit" name="" value="submit" onclick="return   Client.handleSubmit(event)" onsubmit="return  Client.handleSubmit(event)"> -->
         </form>
@@ -120,11 +120,11 @@
 <script>
     // Check that service workers are supported
     if ('serviceWorker' in navigator) {
-        // Use the window load event to keep the page load performant
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/service-worker.js');
-        });
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
     }
-</script>
+    </script>
 </body>
 </html>

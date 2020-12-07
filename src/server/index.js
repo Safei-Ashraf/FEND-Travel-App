@@ -66,8 +66,9 @@ export const getWeather = async (req,r)=>{
 
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
-   // res.sendFile(path.resolve('src/client/views/index.html'))
+    res.sendFile(path.resolve('src/client/views/index.html'))
 })
+
 
 
 //GET Route Setup:
