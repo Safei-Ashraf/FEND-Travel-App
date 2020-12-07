@@ -1,5 +1,4 @@
-import  { handleSubmit,validateInput } from './formHandler';
-//import img from '../media/place-holder.jpg';
+
 
 //Object that would hold all trip's info.
 export const trips_data = {};
@@ -113,17 +112,14 @@ const pix_response = await fetch(`${pix_baseUrl}${pix_apiKey}&q=${city_name}${pi
 
 
 
-
-
-
-
-
 //Helper Methods:
 //to fill html elem:
 export const fillValue = (elem, value_toBe) =>{
     elem.innerText = value_toBe;
 }
+
 export const showElem = (elem)=>{
     console.log(elem);
     elem.style.display = 'block';
+    return;
 }

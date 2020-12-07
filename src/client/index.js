@@ -1,5 +1,4 @@
 import { checkForName } from './js/nameChecker'
-//import { handleSubmit } from './js/formHandler'
 import { get_GeoNamesInfo, get_WeatherInfo, get_PixPic, trips_data, fillValue,showElem } from './js/app';
 import './styles/resets.scss'
 import './styles/base.scss'
@@ -48,7 +47,7 @@ const calculateDate = (date1, date2)=>{
     }
 
 
-const handleFormSubmit = (e)=>{
+export const handleFormSubmit = (e)=>{
     e.preventDefault();
     showElem(results_container);
     //calculate trip countdown:

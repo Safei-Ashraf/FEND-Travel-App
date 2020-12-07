@@ -19,6 +19,7 @@
     "dotenv": "^8.2.0",
     "ex ress": "^4.17.1",
     "node-fetch": "^2.6.1",
+    "regenerator-runtime": "^0.13.7",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-remove-serviceworker-plugin": "^1.0.0"
