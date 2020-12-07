@@ -1,6 +1,6 @@
 import { checkForName } from './js/nameChecker'
 //import { handleSubmit } from './js/formHandler'
-import { get_GeoNamesInfo, trips_data, fillValue } from './js/app';
+import { get_GeoNamesInfo, get_WeatherInfo, trips_data, fillValue } from './js/app';
 import './styles/resets.scss'
 import './styles/base.scss'
 import './styles/footer.scss'
@@ -16,6 +16,10 @@ const today_dateField = document.getElementById('today-date');
 const today_date = new Date();
 today_dateField.value = today_date.getFullYear().toString() + '-' + (today_date.getMonth() + 1).toString().padStart(2, 0) +
     '-' + today_date.getDate().toString().padStart(2, 0);
+//setting min date selection:    
+input_depDate.min = today_dateField.value;
+input_leavingDate.min = today_dateField.value;
+
 //DOM Elemnts:
 //info display:
 const city_nameDisplay = document.querySelector('.country');
@@ -45,7 +49,7 @@ const handleFormSubmit = (e)=>{
     e.preventDefault();
     //calculate trip countdown:
     const countdown = (Date.parse(input_depDate.value)-Date.parse(today_dateField.value)) / (60*60*24*1000);
-
+    console.log('Handling form begins!');
     console.log(`this the value of city input ${input_city.value}`);
     console.log(`this the value of dep  input ${input_depDate.value}`);
     console.log(`this the value of leave input ${input_leavingDate.value}`);
@@ -61,6 +65,8 @@ const handleFormSubmit = (e)=>{
     fillValue(trip_lengthPrint,trips_data.length);
     console.log(`& it is ${trips_data.countdown} day(s) Away!`);
     get_GeoNamesInfo(input_city.value);
+    console.log(`count down var is ${countdown} and countdown obj is ${trips_data.countdown}`)
+    get_WeatherInfo(trips_data.countdown);
     resetFormFields();
     console.log(trips_data)
 }
