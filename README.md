@@ -18,9 +18,6 @@ This Project provides a form for the user to add the name of a city he would lik
 
 ## API's used:
 
-### Meaning Cloud API
-
-
 >   GeoNames API  - for city name and info.
 
 
@@ -53,8 +50,6 @@ To run tests using Jest, use the command "npm run test"
 
 ### Results:
 
- PASS  __test__/handleSubmit.test.js (11.598 s)
- PASS  __test__/validateUrl.test.js (11.618 s)
 
 Test Suites: 2 passed, 2 total
 Tests:       3 passed, 3 total
@@ -64,7 +59,7 @@ Ran all test suites.
 
 ## Starter Code:
 
-Basic code and file structure are provided by Udacity, as layout for requirements in project "NLP Evaluation"
+Basic code and file structure are provided by Udacity, as layout for requirements in project "Travel-App"
 
 
 

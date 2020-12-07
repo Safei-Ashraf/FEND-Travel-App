@@ -94,4 +94,7 @@ app.post('/add', getWeather);
 app.listen(PORT, function () {
     console.log(`Example app listening on port ${PORT}!!`)
 })
-
+app.get('/test', async (req, res) => {
+  res.json({message: 'pass!'})
+})
+module.exports = app;
