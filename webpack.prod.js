@@ -1,8 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-//const WorkboxPlugin = require('workbox-webpack-plugin');
-const RemoveServiceWorkerPlugin = require('webpack-remove-serviceworker-plugin')
+const WorkboxPlugin = require('workbox-webpack-plugin');
+//const RemoveServiceWorkerPlugin = require('webpack-remove-serviceworker-plugin')
 
 
 
@@ -34,6 +34,6 @@ module.exports = {
             filename: "./index.html",
         }),
         new WorkboxPlugin.GenerateSW(),
-        new RemoveServiceWorkerPlugin({ filename: 'service-worker.js' })
+        //new RemoveServiceWorkerPlugin({ filename: 'service-worker.js' })
     ]
 }
