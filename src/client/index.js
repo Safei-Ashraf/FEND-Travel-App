@@ -1,4 +1,3 @@
-import { checkForName } from './js/nameChecker'
 import { get_GeoNamesInfo, get_WeatherInfo, get_PixPic, trips_data, fillValue,showElem,resetFormFields } from './js/app';
 import './styles/resets.scss'
 import './styles/base.scss'
@@ -27,7 +26,7 @@ const city_nameDisplay = document.querySelector('.country');
 const trip_countDownDisplay = document.querySelector('.days');
 const trip_lengthDisplay = document.querySelector('.length');
 const trip_weatherDisplay = document.querySelector('.weather-temp');
-const reset_btn = document.getElementById('#reset');
+const reset_btn = document.getElementById('reset');
 // //Print box:
 // const city_namePrint = document.querySelector('#print-country');
 // const trip_lengthPrint = document.querySelector('#print-length');
@@ -77,7 +76,3 @@ main_form.addEventListener('submit',handleFormSubmit);
 reset_btn.addEventListener('click', resetFormFields(input_city.value ,  input_depDate.value, input_leavingDate))
 
 
-export{
-    checkForName,
-    //handleSubmit
-}

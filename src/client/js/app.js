@@ -123,10 +123,11 @@ export const showElem = (elem)=>{
     elem.style.display = 'block';
     return;
 }
-export const resetFormFields = (x,y,z)=>{
+export const resetFormFields = (x,y,z, )=>{
     x.value = '';
     y.value = '';
     z.value = '';
+    console.log('clicked reset')
 }
 
 
