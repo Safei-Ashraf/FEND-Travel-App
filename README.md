@@ -1,5 +1,6 @@
 #   Evaluate News with NLP - FEND Project 4/5
 
+  # Carry ON with Weatherpit API then PIXshit then Printing and we are DONE!
 
 ##  Table of Contents
 

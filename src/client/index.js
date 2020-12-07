@@ -1,5 +1,5 @@
 import { checkForName } from './js/nameChecker'
-import { handleSubmit } from './js/formHandler'
+//import { handleSubmit } from './js/formHandler'
 import { get_GeoNamesInfo, trips_data, fillValue } from './js/app';
 import './styles/resets.scss'
 import './styles/base.scss'
@@ -76,5 +76,5 @@ const resetFormFields = ()=>{
 
 export{
     checkForName,
-    handleSubmit
+    //handleSubmit
 }
